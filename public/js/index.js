@@ -1,6 +1,6 @@
 // 部署修改地址
 let baseUrl = 'https://api-nba98.vercel.app/'
-let api = baseUrl + 'api/'
+let api = baseUrl
 
 function ajax(options, Callback) {
     var xhr = null;
