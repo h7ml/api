@@ -1,6 +1,5 @@
 // 部署修改地址
-let baseUrl = 'https://api.n0ts.cn/'
-// baseUrl = 'http://127.0.0.1:3000/'
+let baseUrl = 'https://api-nba98.vercel.app/'
 let api = baseUrl + 'api/'
 
 function ajax(options, Callback) {
