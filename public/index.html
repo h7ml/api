@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件上传 by Lu</title>
+    <link rel="shortcut icon" href="./images/bitbug_favicon.ico" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="./css/Global.css">
+</head>
+
+<body>
+    <div class="head">
+        <h1><img src="./images/files.png" alt="文件夹"><a href="/">Lu</a></h1>
+    </div>
+    <div class="upload">
+        <input type="submit" value="上 传">
+        <input type="file" accept=".txt" name="fs" multiple="multiple">
+        <div class="right">
+            <input type="text" placeholder="输入文件名">
+        </div>
+    </div>
+
+    <div class="mainBox">
+        <ul>
+        </ul>
+    </div>
+    <div class="bottomBox">
+        <button class="delete" onclick="butDelete()">删除</button>
+        <button class="check" onclick="inputAll()">反选</button>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

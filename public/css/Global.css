@@ -1,0 +1,170 @@
+:root {
+    --AllBg: rgb(245, 245, 245);
+    --ValueBg: rgb(255, 255, 255);
+    --shadow: rgb(231, 231, 231);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background: var(--AllBg);
+    color: #000;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.head {
+    height: 55px;
+    line-height: 55px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 10px var(--shadow);
+}
+
+.head>h1 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.head>h1>img {
+    width: 40px;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
+    -moz-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    -o-transform: translateY(8px);
+}
+
+.mainBox,
+.upload,
+.bottomBox {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.mainBox {
+    position: relative;
+    min-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 5px 5px var(--shadow);
+    max-height: 80%;
+    overflow-y: scroll;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.upload {
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    min-width: 392px;
+}
+
+.upload .right {
+    float: right;
+}
+
+.right>input {
+    outline: none;
+    height: 22px;
+    font-size: 15px;
+    padding: 0 2px;
+}
+
+.upload>input[type="submit"] {
+    padding: 2px 8px;
+    border: 1px solid #000;
+    background: rgb(238, 238, 238);
+}
+
+.mainBox>ul>li {
+    list-style: none;
+    font-size: 24px;
+    position: relative;
+    padding: 10px 0px;
+}
+
+.mainBox>ul>li>a>img {
+    width: 30px;
+    margin-right: 2px;
+    transform: translateY(7px);
+    -webkit-transform: translateY(7px);
+    -moz-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    -o-transform: translateY(7px);
+}
+
+.mainBox>ul>li>a {
+    width: 80%;
+    display: block;
+    margin-right: 20px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.mainBox>ul>li>a:hover::after {
+    content: "点击查看详情";
+    font-size: 14px;
+    color: blue;
+    position: absolute;
+    top: -5px;
+    left: 0;
+}
+
+.mainBox>ul>li>input {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    right: 5px;
+    top: 15px;
+}
+
+.bottomBox {
+    width: 50%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.bottomBox>button {
+    float: right;
+    width: 60px;
+    height: 30px;
+    margin: 10px 5px;
+}
+
+@media (max-width: 440px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mainBox {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .upload {
+        width: 100%;
+        min-width: 320px;
+    }
+}
