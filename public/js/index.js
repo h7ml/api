@@ -1,6 +1,7 @@
 // 部署修改地址
 let baseUrl = 'https://api-nba98.vercel.app/'
-let api = baseUrl
+// baseUrl = 'http://127.0.0.1:3000/'
+let api = baseUrl + 'api/'
 
 function ajax(options, Callback) {
     var xhr = null;
@@ -12,7 +13,7 @@ function ajax(options, Callback) {
     }
     if (options.type === "FILES") {
         xhr.open("POST", options.url, options.async); //链接改成你项目中的
-        xhr.send(options.data); //发送时  Content-Type默认就是: multipart/form-data; 
+        xhr.send(options.data); //发送时  Content-Type默认就是: multipart/form-data;
     } else if (options.type === "POST") {
         xhr.open("POST", options.url, options.async); //链接改成你项目中的
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -48,7 +49,7 @@ function getFiles() {
     ajax({
         url: api + "getFilesDir", // url---->地址
         type: "GET", // type ---> 请求方式
-        async: true, // async----> 同步：false，异步：true 
+        async: true, // async----> 同步：false，异步：true
     }, (err, data) => {
         if (err) {
             alert('网页异常! 请联系管理员。')
@@ -116,7 +117,7 @@ submitBut.onclick = function (event) {
     ajax({
         url: api + "pushFiles", // url---->地址
         type: "FILES", // type ---> 请求方式
-        async: true, // async----> 同步：false，异步：true 
+        async: true, // async----> 同步：false，异步：true
         data: form
     }, (err, val) => {
         if (err) {
@@ -161,7 +162,7 @@ function butDelete() {
     ajax({
         url: api + "deleteFiles", // url---->地址
         type: "POST", // type ---> 请求方式
-        async: true, // async----> 同步：false，异步：true 
+        async: true, // async----> 同步：false，异步：true
         data: `psw=${psw}&filesName=${filesName}`
     }, (err, val) => {
         if (err) {
